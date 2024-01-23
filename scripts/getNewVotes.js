@@ -39,7 +39,7 @@ const newVotes = votes
 
 if (newVotes.length) {
   try {
-    fs.writeFileSync('./data/votes.json', JSON.stringify(newVotes, null, 2))
+    fs.writeFileSync('./data/new-votes.json', JSON.stringify(newVotes, null, 2))
   } catch (err) {
     console.error(err)
   }

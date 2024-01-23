@@ -4,7 +4,7 @@ import { spreadsheetId, getCredentials } from './helpers/google.js'
 
 const votes = JSON.parse(
   await fs.promises.readFile(
-    new URL('../data/votes.json', import.meta.url)
+    new URL('../data/new-votes.json', import.meta.url)
   )
 )
 

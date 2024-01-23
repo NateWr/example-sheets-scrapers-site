@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scottish Parliament Scorecard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        html,
+        body {
+            background: #ddd;
+            margin: 0;
+            font-family: 'Work Sans', sans-serif;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+        }
+        .wrapper {
+            background: #222;
+            color: #fff;
+            width: 90vw;
+            max-width: 40rem;
+            padding: 1rem;
+        }
+        header {
+            margin-bottom: 4rem;
+        }
+        h1 {
+            margin: 0;
+            line-height: 0.9;
+        }
+        .lead {
+            font-size: 1.25rem;
+            margin-top: 0.25em;
+            line-height: 1.2;
+        }
+        .members {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 2rem 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .name {
+            font-size: 1rem;
+            margin: 0;
+        }
+        .party {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .votes {
+            margin: 0.5rem 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .vote {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+        @media (min-width: 768px) {
+            main {
+                padding: 2rem;
+            }
+            .wrapper {
+                padding: 2rem;
+                box-shadow: 0 0 40px 40px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
+  </head>
+  <body>
+      <main>
+        <div class="wrapper">
+            <header>
+                <h1>Scottish Parliament Scorecard</h1>
+                <div class="lead">
+                    How is your elected representative voting?
+                </div>
+            </header>
+            <ul class="members">
+                {{#each members }}
+                    <li class="member">
+                        <h2 class="name">{{ name }}</h2>
+                        <div class="party">{{ party }}</div>
+                        <ul class="votes">
+                            {{#each votes}}
+                                <li class="vote">
+                                    <div class="vote-vote">{{ vote }}</div>
+                                    <div class="vote-name">{{ name }}</div>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </main>
+  </body>
+</html>

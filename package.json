@@ -5,7 +5,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "get-data": "node ./scripts/getNewVotes.js && npx cypress run --spec cypress/e2e/votes.cy.js && node ./scripts/saveVotes.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "get-new-data": "node ./scripts/getNewVotes.js && npx cypress run --spec cypress/e2e/votes.cy.js && node ./scripts/saveVotes.js",
+    "get-site-data": "node ./scripts/getSiteData.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +18,10 @@
     "cypress": "^13.6.1",
     "dotenv": "^16.3.1",
     "google-auth-library": "^9.4.1",
-    "googleapis": "^129.0.0"
+    "googleapis": "^129.0.0",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
   }
 }

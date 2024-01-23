@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
-import votes from '../../data/votes.json'
+import votes from '../../data/new-votes.json'
 
-const VOTES_FILE = './data/votes.json'
+const VOTES_FILE = './data/new-votes.json'
 
-describe('Searches Scottish Parliament website for the voting records of ', () => {
+describe('Searches Scottish Parliament website for the voting records', () => {
 
   votes
     .filter(vote => !('members' in vote))
