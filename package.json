@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "npm run get-new-data && npm run get-site-data && npm run build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",

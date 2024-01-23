@@ -27,3 +27,9 @@ Build the site.
 ```
 npm run build
 ```
+
+Get all data and build the site from scratch (useful for automated deployments, like Netlify).
+
+```
+npm run deploy
+```
