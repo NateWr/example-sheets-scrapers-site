@@ -1,0 +1,19 @@
+{
+  "name": "example-sheets-scrapers-site",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "get-data": "node ./scripts/getNewVotes.js && npx cypress run --spec cypress/e2e/votes.cy.js && node ./scripts/saveVotes.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.6.1",
+    "dotenv": "^16.3.1",
+    "google-auth-library": "^9.4.1",
+    "googleapis": "^129.0.0"
+  }
+}
