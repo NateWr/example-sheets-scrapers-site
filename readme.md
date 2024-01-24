@@ -14,7 +14,7 @@ Before you start, you will need the following.
    3. Create a new Service Account.
    4. Generate a JSON key for the Service Account.
 4. Share your Google Sheet with the Service Account's email address. The email address will look like `<name>@<project>-123456.iam.gserviceaccount.com`.
-5. Use the [btoa()](https://developer.mozilla.org/en-US/docs/Web/API/btoa) to encode the JSON key. Example: `btoa(JSON.stringify({...}))`.
+5. Use the [btoa()](https://developer.mozilla.org/en-US/docs/Web/API/btoa) function to base64 encode the JSON key. Example: `btoa(JSON.stringify({...}))`.
 6. Create a `.env` file with the encoded JSON key and the Google Sheet id:
 
 ```
